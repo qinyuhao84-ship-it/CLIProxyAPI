@@ -1,0 +1,68 @@
+# CLIProxyAPI configuration for Zeabur deployment
+# Codex API keys will be added later when accounts are available
+
+host: ""
+port: 8317
+
+# Management API settings (enabled for adding tokens later)
+remote-management:
+  allow-remote: false  # Only localhost can access management API
+  secret-key: "bca15f66174e2b38939f7b0b4fe4c6dc119d3221ea7d433ab4f6d93ae1a988e9"  # Management API secret
+  disable-control-panel: false
+
+# Authentication directory (default, tokens can also be added via config)
+auth-dir: "~/.cli-proxy-api"
+
+# API keys for accessing the proxy - CHANGE THIS IN PRODUCTION
+api-keys:
+  - "356e90aa666b858ce62969d836efe608cf48b00c1324a260"
+
+# Enable debug logging
+debug: false
+
+# Commercial mode reduces memory overhead
+commercial-mode: true
+
+# Log to stdout (Zeabur captures logs)
+logging-to-file: false
+
+# Maximum total log size (MB)
+logs-max-total-size-mb: 10
+
+# Proxy URL (optional, for network routing)
+proxy-url: ""
+
+# Routing strategy for multiple accounts
+routing:
+  strategy: "round-robin"
+
+# Quota exceeded behavior
+quota-exceeded:
+  switch-project: true
+  switch-preview-model: true
+
+# Request retry settings
+request-retry: 3
+max-retry-credentials: 0
+max-retry-interval: 30
+
+# Codex API keys (TO BE ADDED LATER when you have Codex team accounts)
+# Example:
+# codex-api-key:
+#   - api-key: "sk-atSM..."  # Token from Codex OAuth login
+#     prefix: "codex1"
+#   - api-key: "sk-atSM..."  # Second account
+#     prefix: "codex2"
+
+# Other providers can be added similarly
+# gemini-api-key:
+#   - api-key: "AIzaSy..."
+
+# claude-api-key:
+#   - api-key: "sk-ant..."
+
+# openai-compatibility:
+#   - name: "openrouter"
+#     base-url: "https://openrouter.ai/api/v1"
+#     api-key-entries:
+#       - api-key: "sk-or-v1-..."
