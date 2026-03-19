@@ -6,7 +6,7 @@ port: 8317
 
 # Management API settings (enabled for adding tokens later)
 remote-management:
-  allow-remote: false  # Only localhost can access management API
+  allow-remote: true  # Allow remote access for management API
   secret-key: "bca15f66174e2b38939f7b0b4fe4c6dc119d3221ea7d433ab4f6d93ae1a988e9"  # Management API secret
   disable-control-panel: false
 
@@ -60,6 +60,11 @@ max-retry-interval: 30
 
 # claude-api-key:
 #   - api-key: "sk-ant..."
+
+# Antigravity provider configuration
+antigravity-api-key:
+  - api-key: "fake-antigravity-key-for-testing"
+    prefix: "antigravity1"
 
 # openai-compatibility:
 #   - name: "openrouter"
